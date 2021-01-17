@@ -39,7 +39,7 @@ function App() {
         // Search API
         if (event.target.value.length > 2) {
             fetch(
-                `http://www.omdbapi.com/?apikey=${API_KEY}&s=${event.target.value}&type=movie`
+                `https://www.omdbapi.com/?apikey=${API_KEY}&s=${event.target.value}&type=movie`
             )
                 .then((res) => res.json())
                 .then(
@@ -194,7 +194,7 @@ function App() {
         let nominatedPromises = [];
         nominatedStoredIdList.forEach((movieId) => {
             nominatedPromises.push(
-                fetch(`http://www.omdbapi.com/?apikey=${API_KEY}&i=${movieId}`)
+                fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&i=${movieId}`)
                     .then((res) => res.json())
                     .then(
                         (result) => {
